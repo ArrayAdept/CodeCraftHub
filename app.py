@@ -14,6 +14,15 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = (
+        "GET, POST, PUT, DELETE, OPTIONS"
+    )
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    return response
+
 DATA_FILE = Path(__file__).resolve().parent / "courses.json"
 VALID_STATUSES = {"Not Started", "In Progress", "Completed"}
 REQUIRED_FIELDS = {"name", "description", "target_date", "status"}
