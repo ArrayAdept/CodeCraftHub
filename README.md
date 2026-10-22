@@ -161,3 +161,6 @@ The tests use a temporary JSON file and do not modify your actual `courses.json`
 ## Notes
 
 This project is designed for learning REST API fundamentals. It intentionally has no authentication and uses a local JSON file instead of a database. Do not expose it to the public internet or use it for sensitive data without adding appropriate security and persistence controls.
+=======
+# CodeCraftHub
+>>>>>>> 14271f43f3ef6c8d75dd3fee59c806df0304f210
